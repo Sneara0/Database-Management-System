@@ -1,0 +1,202 @@
+✅ What is Database?
+A database is a structured place where data is stored, organized, and managed so we can easily add, update, delete, and search information.
+
+Think of a database like a digital cupboard where data is kept in tables (rows & columns).
+
+Example:
+User information
+Product list
+Orders
+Messages
+All these are stored in a database.
+
+✅ ডাটাবেইস কী?
+
+
+ডাটাবেইস হল একটি তথ্য সংরক্ষণের জায়গা, যেখানে ডেটা সাজানোভাবে রাখা হয় যাতে সহজে
+add, update, delete, search করা যায়।
+
+এটা ঠিক যেন একটি ডিজিটাল আলমারি, যেখানে বিভিন্ন তথ্য টেবিল আকারে (row & column) সংরক্ষণ করা হয়।
+
+উদাহরণ:
+ইউজারের তথ্য
+প্রোডাক্ট লিস্ট
+অর্ডার ডেটা
+মেসেজ
+এসব সবকিছু ডাটাবেইস-এ থাকে।
+
+
+✅ What is Data?
+Data means any information that can be stored, processed, or used.
+✅ ডেটা কী?
+ডেটা মানে হলো যে কোনো তথ্য যা সংরক্ষণ করা যায়, ব্যবহার করা যায় বা প্রক্রিয়া করা যায়।
+
+✅ What is Information?
+Data means any information that can be stored, processed, or used.
+
+✅ ইনফরমেশন কী? 
+
+ইনফরমেশন হল এমন ডেটা যেটাকে প্রক্রিয়া করে অর্থবহ করা হয়েছে।
+যখন কাঁচা ডেটা সাজানো বা ব্যাখ্যা করা হয় এবং তা অর্থ বোঝায় → তখন সেটাই information।
+
+👉 Data = কাঁচা তথ্য
+👉 Information = সাজানো + অর্থবহ তথ্য
+
+সহজ উদাহরণ:
+Data: 80
+Information: "ছাত্রটি ১০০ এর মধ্যে ৮০ পেয়েছে।"
+এখন এটাতে একটি মানে আছে → এটিই information।
+
+database model মানে হলো ডেটা কীভাবে সাজানো হবে, সংরক্ষণ হবে এবং একে অপরের সাথে সংযোগ থাকবে — সেই স্ট্রাকচারের ধরন|
+⭐ Main Types of Database Models
+
+(সবচেয়ে বেশি ব্যবহৃত এবং যেগুলো ইন্টারভিউতেও জিজ্ঞেস করে)
+
+1️⃣ Hierarchical Model
+
+Tree structure (Parent → Child)
+
+এক parent, অনেক child
+2️⃣ Network Model
+
+এক child-এর একাধিক parent থাকতে পারে
+Complex relationship handle করে
+
+3️⃣ Relational Model (Most Used)
+
+Tables (rows + columns)
+SQL databases
+Example: MySQL, PostgreSQL
+
+4️⃣ Object-Oriented Model
+
+Data stored as objects
+OOP concept এর মতো
+
+5️⃣ Document Model (NoSQL)
+
+JSON-like documents
+Example: MongoDB, Firestore
+
+6️⃣ Key–Value Model
+key → value
+Very fast
+Example: Redis
+
+7️⃣ Columnar Model
+
+Column-wise storage
+Big Data use
+Example: Cassandra, HBase
+
+8️⃣ Graph Model
+
+Nodes + Relationships
+Social networks-type
+Example: Neo4j
+
+⭐ Super Key কী? (Bangla Explanation)
+Super key হলো টেবিলের এমন একটি বা একাধিক কলাম যেগুলো দিয়ে একটি row-কে 100% ইউনিকভাবে চেনা যায়।
+
+👉 Super key-তে অতিরিক্ত কলামও থাকতে পারে — তারপরও এটি row-কে unique করে।
+⭐ Very Simple Example (Students Table)
+id	email	phone	name
+1	a@gmail.com
+	01711	Sneha
+2	b@gmail.com
+	01822	Noor
+✔ Unique identify করতে পারে যেগুলো = Super Keys:
+
+1️⃣ id
+2️⃣ email
+3️⃣ phone
+4️⃣ (id + email)
+5️⃣ (email + phone + name)
+6️⃣ (id + phone)
+
+👉 এদের মধ্যে অনেকগুলোতে extra column আছে, কিন্তু row-কে চিনে—তাই সবই super key.
+⭐ Super Key = Unique Identify করার সব ধরনের key
+
+হতে পারে একটা column
+হতে পারে অনেকগুলো column-এর combination
+ভিতরে unnecessary column থাকতে পারে
+⭐ Important Note
+Every Candidate Key is a Super Key
+but
+Every Super Key is NOT a Candidate Key
+(কারণ super key-তে extra column থাকতে পারে)
+
+⭐ Primary Key কী? (Bangla Explanation)
+
+Primary key হলো টেবিলের এমন একটি কলাম বা কলামের গ্রুপ যেটা দিয়ে প্রতিটি row-কে আলাদা ভাবে চেনা যায়।
+
+➡ যেটা কখনো ডুপ্লিকেট হতে পারে না
+➡ কখনো ফাঁকা (NULL) থাকতে পারে না
+➡ টেবিলে একটাই primary key থাকে
+
+⭐ Simple Example (Students Table)
+id	name	email
+1	Sneha	s@gmail.com
+2	Noor	n@gmail.com
+👉 এখানে id প্রতিটি row-কে আলাদা করে চেনে → তাই এটা Primary Key।
+
+
+⭐ What is Candidate Key? (English Explanation)
+
+A candidate key is a minimal set of attributes that can uniquely identify a row.
+👉 “Candidate” means candidate to become Primary Key.
+
+➡ It must be unique
+➡ Cannot be NULL
+➡ No extra/unnecessary column allowed
+➡ From these, one is chosen as Primary Key
+
+⭐ Candidate Key কী? (Bangla Explanation)
+
+Candidate key হলো টেবিলের এমন একটি বা একাধিক কলাম যেগুলো দিয়ে row-কে একদম বুঝে নিতে পারা যায় এবং
+👉 ভিতরে কোনো extra column থাকে না।
+
+➡ একাধিক candidate key থাকতে পারে
+➡ এদের যে কোনো একটা Primary Key হতে পারে
+➡ তাই এদের বলে “candidate” (প্রার্থী)
+
+⭐ Clear Example (Students Table)
+id	email	phone	name
+1	a@gmail.com
+	01711	Sneha
+2	b@gmail.com
+	01822	Noor
+✔ Which fields can uniquely identify a row?
+id → unique
+email → unique
+phone → unique
+
+👉 তাই এগুলো Candidate Keys:
+
+Candidate Keys ✔
+id
+email
+phone
+
+এদের মধ্যে যেকোনো একটি Primary Key করা যায়।
+
+⭐ Super Key vs Candidate Key (Very Easy)
+Super Key	Candidate Key
+Extra column থাকতে পারে	Extra column থাকতে না পারে
+Bigger	Minimal
+Many	Few
+Unique identify করে	Unique + Minimal
+Example:
+
+Super Keys:
+id
+email
+(id + email)
+(email + phone)
+
+Candidate Keys:
+id
+email
+phone
+
+👉 Because candidate key must be minimal, no extra column.
